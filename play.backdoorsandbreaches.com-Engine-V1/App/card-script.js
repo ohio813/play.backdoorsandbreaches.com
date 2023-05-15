@@ -54,8 +54,12 @@ function randcondition() {
         console.log("Chosen Inject:");
         console.log(randins.slice(0,1));
         randins.shift();
+        randcons.shift();
+        //set consultants
+        
 
         shuffle(randins);
+        shuffle(randcons);
         console.log("Remaining Pool:");
         console.log(randins);
 
@@ -71,6 +75,9 @@ console.log(randins.length);
 
 s = 0
 t = 1
+
+u = 0
+v = 1
 function update_ins() {
 
     document.getElementById("e").innerHTML = randins.slice(s,t);
@@ -88,11 +95,11 @@ function rem_ins() {
 
     function update_con() {
 
-      document.getElementById("f").innerHTML = randins.slice(s,t);
-              s++
-              t++
-              if (t==randins.length+1)
-                {s = 0; t = 1;}
+      document.getElementById("f").innerHTML = randcons.slice(u,v);
+              u++
+              v++
+              if (v==randcons.length+1)
+                {u = 0; v = 1;}
           }
   
   function rem_con() {
@@ -105,9 +112,12 @@ function rem_ins() {
       //console.log("buildList started");
       $.getJSON(cardlist, function(h) {
         //console.log(h);
-       // console.log("This is what we are trying to build");
+        //console.log("This is what we are trying to build");
         $.each(h.data, function(i, x) {
-          //console.log("BUILDING");
+          console.log("BUILDING");
+          console.log(i);
+          console.log(x);
+
   
               if (item=="proc" && x.type=="procedure") {
                   c ="procimg"
@@ -118,8 +128,10 @@ function rem_ins() {
                      }
                   proc.push(li);
                  }
+
               if (item=="ins" && x.type=="inject") {
                   c="inject"
+                  console.log("inject found");
                   if (x.details==null|| x.details==""){
                        li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='inject"+x.id+"'><img src='"+x.image+"'></a></div>"
                      } else {
@@ -128,18 +140,8 @@ function rem_ins() {
                   ins.push(li)
                   randins = shuffle(ins)
                   }
-                  if (item=="cons" && x.type=="consultant") {
-                    hasConsultants = true; //We have consultants if we reach here, so let the world know!
-                    console.log("CONSULTANTS!");
-                    c="inject"
-                    if (x.details==null|| x.details==""){
-                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='inject"+x.id+"'><img src='"+x.image+"'></a></div>"
-                       } else {
-                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='inject"+x.id+"' data-title='"+x.details+"'><img src='"+x.image+"'></a></div>"
-                       }
-                    cons.push(li)
-                    randins = shuffle(cons)
-                    }
+                  
+
 
               if (item=="init" && x.type=="initial") {
                   c="scenimg"
@@ -177,6 +179,19 @@ function rem_ins() {
                     }
                   persist.push(li)
                   }
+
+                  if (item=="cons" && x.type=="consultant") {
+                    hasConsultants = true; //We have consultants if we reach here, so let the world know!
+                    console.log("CONSULTANTS!");
+                    c="consultant"
+                    if (x.details==null|| x.details==""){
+                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='consultant"+x.id+"'><img src='"+x.image+"'></a></div>"
+                       } else {
+                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='consultant"+x.id+"' data-title='"+x.details+"'><img src='"+x.image+"'></a></div>"
+                       }
+                    cons.push(li)
+                    randcons = shuffle(cons)
+                    }
   
                   //console.log("building list...");
               });
@@ -199,7 +214,11 @@ $(document).ready(function() {
   // Determine Deck Selection
   deck = localStorage.getItem("deckKey");
   if (deck === null)
+  {
     deck = "CoreV21";
+    console.log("null deck, choosing default");
+  }
+
   
     updatedeck(deck);
   
@@ -215,7 +234,7 @@ $(document).ready(function() {
    cardtype = ["proc", "init", "pivot", "c2", "persist", "ins", "cons"];
    cardtype.forEach(buildlist);
    finishedBuild = true;
-   updatedeck(deck);
+   //updatedeck(deck);
 
 
    
@@ -230,6 +249,8 @@ console.log(persist);
 console.log(c2);
 console.log(pivot);
 */
+console.log(ins);
+console.log(cons);
 
 
 
