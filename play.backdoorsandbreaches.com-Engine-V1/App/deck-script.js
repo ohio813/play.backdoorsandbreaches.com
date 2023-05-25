@@ -53,6 +53,10 @@ function opendeckselector() {
       if (selecteddeck == "Huntress"){
         cardlist = 'decks/Huntress/carddb.json'
       }
+      if (selecteddeck == "Cloud Security")
+      {
+        cardlist = "decks/CloudSecurity/carddb.json";
+      }
   
           $.getJSON(cardlist, function(h) {
               $(a).html("<img class='full' src='"+h.red+"'>");

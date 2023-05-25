@@ -114,9 +114,7 @@ function rem_ins() {
         //console.log(h);
         //console.log("This is what we are trying to build");
         $.each(h.data, function(i, x) {
-          console.log("BUILDING");
-          console.log(i);
-          console.log(x);
+          
 
   
               if (item=="proc" && x.type=="procedure") {
