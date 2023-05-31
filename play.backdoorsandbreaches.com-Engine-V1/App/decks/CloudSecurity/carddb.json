@@ -1,7 +1,7 @@
 {
     "title": "Cloud Security Expansion",
     "revdate": "05-12-2023",
-    "link": "",
+    "link": "https://www.antisyphontraining.com/",
     "data" : [
         {
             "name" : "HTTP as Exfil",
@@ -615,6 +615,6 @@
     "purple": "img/bb-back-persist.png",
     "grey":   "img/bb-back-inject.png",
     "green":  "",
-    "logo":   ""
+    "logo":   "img/antisyphon.png"
 
 }

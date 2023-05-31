@@ -1,7 +1,7 @@
 {
     "title": "CoreV2.2",
     "revdate": "04-14-2023",
-    "link": "",
+    "link": "https://www.antisyphontraining.com/",
     "data" : [
         {
             "name" : "HTTP as Exfil",
@@ -375,6 +375,6 @@
     "purple": "img/bb-back-persist.png",
     "grey":   "img/bb-back-inject.png",
     "green":  "",
-    "logo":   ""
+    "logo":   "img/antisyphon.png"
 
 }
