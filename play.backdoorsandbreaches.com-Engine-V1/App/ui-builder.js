@@ -205,6 +205,51 @@ function chooseinj(id,contents) {
 return false;
 }
 
+//used for checking the addon. Not sure we need this at all...
+function checkaddon(){
+    addonbuttons = document.querySelectorAll('.addonbutt').forEach(el => {
+        el.style.display = 'inline';
+        el.style.color = 'blue';
+    });
+}
+
+//clear add-ons functions
+function clear_ic() {
+    document.getElementById("addIC").innerHTML = ""
+    document.getElementById("solIC").innerHTML = ""
+    IC = 0
+    buttIC.style.display = "inline";
+    clearIC.style.display = "none";
+    shuffle(reminit);
+}
+
+function clear_pe() {
+    document.getElementById("addPE").innerHTML = ""
+    document.getElementById("solPE").innerHTML = ""
+    PE = 0
+    buttPE.style.display = "inline";
+    clearPE.style.display = "none";
+    shuffle(rempivot);
+}
+
+function clear_ce() {
+    document.getElementById("addCE").innerHTML = ""
+    document.getElementById("solCE").innerHTML = ""
+    CE = 0
+    buttCE.style.display = "inline";
+    clearCE.style.display = "none";
+    shuffle(remc2);
+}
+
+function clear_per() {
+    document.getElementById("addPER").innerHTML = ""
+    document.getElementById("solPER").innerHTML = ""
+    PER = 0
+    buttPER.style.display = "inline";
+    clearPER.style.display = "none";
+    shuffle(rempersist);
+}
+
 chosenprocs=[]
 function chooseproc(id,contents) {
     console.log(id);

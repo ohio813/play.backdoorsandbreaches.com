@@ -605,5 +605,6 @@
     "purple": "img/bb-back-persist.png",
     "grey":   "img/bb-back-inject.png",
     "green":  "img/bb-back-consultant.png",
-    "logo":   "decks/Huntress/huntressLogo.png"
+    "logo":   "decks/Huntress/huntressLogo.png",
+    "addOnEnabled":"true"
   }

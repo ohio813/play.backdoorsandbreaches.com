@@ -17,5 +17,6 @@
   "purple": "img/bb-back-persist.png",
   "grey":   "img/bb-back-inject.png",
   "green":  "",
-  "logo":   ""
+  "logo":   "",
+  "addOnEnabled":   "true"
 }

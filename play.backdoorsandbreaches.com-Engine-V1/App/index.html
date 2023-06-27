@@ -21,6 +21,7 @@
               <input type="radio" id="huntress" name="deck" value="Huntress" ><label for="huntress">Huntress Deck</label><br>
               <input type="radio" id="icsotV1" name="deck" value="ICSOT" ><label for="icsotV1">ICS/OTv1</label><br>
               <input type="radio" id="cloudSecurity" name="deck" value="Cloud Security" ><label for="cloudSecurity">Cloud Security</label><br>
+              <input type="radio" id="redCanary" name="deck" value="Red Canary"><label for="redCanary">Red Canary</label><br>
               <br>
           <button type="submit" class="btn" >Submit</button>
           <button type="button" class="btn cancel" onclick="closedeckselector()">Close Deck Selector</button>
@@ -43,18 +44,30 @@
   
   
     <button onclick="solutiontoggle()"> Solution</button>
+    <button id="addonbuttonSolution" onclick="addonsolutiontoggle()">Add-On Solution</button>
+    
     <button onclick="scenariotoggle()">Scenario Tools</button>
+    
     <div id="dm_solution" style="display:none;">
         <div class="solution" id="dma"><div class="warn">No Initial Compromise</div></div>
         <div class="solution" id="dmb"><div class="warn">No Pivot & Escalate</div></div>
         <div class="solution" id="dmc"><div class="warn">No C2 & Exfil</div></div>
         <div class="solution" id="dmd"><div class="warn">No Persistence</div></div>
     </div>
+
+    <div id="dm_addonsolution" style="display:none;">
+      <div class="addonsol" id="solIC"></div>
+      <div class="addonsol" id="solPE"></div>
+      <div class="addonsol" id="solCE"></div>
+      <div class="addonsol" id="solPER"></div>
+</div>
+
      <div id="dm_scenario" style="display:none;">
          Scenario Tools:
           <button onClick="rando()">Random</button>
           <button onClick="customtoggle()">Custom</button> |
           <button onclick="flipBack()"> Flip Scenario</button>
+          <button id="addonbutton" onclick="addonscenariotoggle()">Add-On Scenario</button>
           <button onClick='window.location.href=window.location.href'>Refresh Page</button>
      </div>
   </div>
@@ -135,6 +148,29 @@
   
   
       </section>
+
+      <!--EXPANSION SCENARIO ADDONS-->
+<div id="addonscenario">
+  <div id="addonscenarioheader">
+    <header>
+      <h1 tabindex="0" id="title">ADD-ON SCENARIO</h1></header>
+    </div>
+        <button id="buttIC" onclick="addIC()"> Add Initial Compromise</button><button id="clearIC" onclick="clear_ic()"> Clear Initial Compromise</button>
+        <button id="buttPE" onclick="addPE()"> Add Pivot & Escalate</button><button id="clearPE" onclick="clear_pe()"> Clear P&E</button>
+        <button id="buttCE" onclick="addCE()"> Add C2 & EXFIL</button><button id="clearCE" onclick="clear_ce()"> Clear C2 & Exfil</button>
+        <button id="buttPER" onclick="addPER()"> Add Persist</button><button id="clearPER" onclick="clear_per()"> Clear Persist</button>
+        |
+        <button onclick="flipBackAddOn()"> Flip Add-On Cards</button>
+
+    <section class="expcards">
+        <div class="addons" id="addIC"></div>
+        <div class="addons" id="addPE"></div>
+        <div class="addons" id="addCE"></div>
+        <div class="addons" id="addPER"></div>
+    </section>
+  <br>
+</div>
+<!-- END EXPANSION ADDONS-->
   
   <!-- PROCEDURE CARDS -->
   <header>
@@ -312,6 +348,14 @@
         $("#consultantButton").show();
         console.log("consultants are present in this deck");
       }
+      
+      //check for Add-On Scenarios as well
+      if (hasAddOns == false)
+      {
+        $("#addonbutton").hide();
+        $("#addonbuttonSolution").hide();
+        console.log("no add-on scenarios are present in this deck");
+      }
 
 
       rando();
@@ -322,6 +366,63 @@
   
   // Start checking if we finished building
   checkBuild();
+
+
+  //Deck flip.js from the original code for teh add-on scenario tools
+  // VERSION*/
+// B&B - Engine.FS.1.1
+//
+
+const addOnCards = document.querySelectorAll(".cards__single");
+
+function flipCard() {
+this.classList.toggle("flip");
+this.setAttribute("state", "flipped");
+this.removeEventListener("click", flipCard);
+}
+
+addOnCards.forEach((card) => card.addEventListener("click", flipCard));
+
+//You can see full tutorial here
+//https://www.ricardomoreira.io/blog/2020-06-15-flip-cards-with-javascript
+
+
+function flipBack() {
+const backs = document.querySelectorAll(".cards__single");
+backs.forEach((c) => 
+{
+	if(c.getAttribute("state")=="flipped")
+	{
+	c.classList.toggle("flip");
+	c.setAttribute("state", "back");
+	c.addEventListener("click", flipCard);
+ }
+});
+
+//card.setAttribute("class", "flipped");
+}
+
+
+//ADD-ON FLIP
+function flipBackAddOn() {
+const addonbacks = document.querySelectorAll('[class^="cards__single_"]');
+
+addonbacks.forEach((xc) =>
+{
+	if(xc.getAttribute("state")=="flipped")
+	{
+	xc.classList.toggle("flip");
+	xc.setAttribute("state", "back");
+	xc.addEventListener("click", flipCard);
+   } else {
+   xc.setAttribute("state", "back");
+   xc.addEventListener("click", flipCard);
+   }
+
+
+});
+
+}
     
     
   

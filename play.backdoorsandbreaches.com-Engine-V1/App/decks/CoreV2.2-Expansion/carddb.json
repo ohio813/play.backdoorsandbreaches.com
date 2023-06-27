@@ -656,6 +656,7 @@
     "purple": "img/bb-back-persist.png",
     "grey":   "img/bb-back-inject.png",
     "green":  "img/bb-back-consultant.png",
-    "logo":   "img/antisyphon.png"
+    "logo":   "img/antisyphon.png",
+    "addOnEnabled":"true"
 
 }

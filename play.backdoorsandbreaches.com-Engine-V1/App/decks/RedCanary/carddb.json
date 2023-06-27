@@ -1,7 +1,7 @@
 {
-    "title": "Cloud Security Expansion",
-    "revdate": "05-12-2023",
-    "link": "https://www.antisyphontraining.com/",
+    "title": "Red Canary Expansion",
+    "revdate": "06-14-2023",
+    "link": "https://www.redcanary.com/",
     "data" : [
         {
             "name" : "HTTP as Exfil",
@@ -368,244 +368,237 @@
             "details" : "<li><a target=\"_blank\" href=\"https://docs.velociraptor.app/\">https://docs.velociraptor.app/</a></li><li><a target=\"_blank\" href=\"https://www.volatilityfoundation.org/\">https://www.volatilityfoundation.org/</a></li>"
         },
         {
-            "name" : "Create Inbox Rules to Forward Emails",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_C2_1.png",
-            "type" : "c2",
+            "name" : "Call a Consultant",
+            "image" : "decks/RedCanary/REDCANARY__1.png",
+            "type" : "procedure",
             "id" : "052",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/sensepost/ruler\">https://github.com/sensepost/ruler</a></li><li><a target=\"_blank\" href=\"https://github.com/OfficeDev/Outlook-Add-in-ForwardEmail\">https://github.com/OfficeDev/Outlook-Add-in-ForwardEmail</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Malicious Serverless Function",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_C2_2.png",
-            "type" : "c2",
+            "name" : "Physical Security Review",
+            "image" : "decks/RedCanary/REDCANARY__2.png",
+            "type" : "procedure",
             "id" : "053",
             "details" : ""
-        },{
-            "name" : "Virtual Machine Access via Web Portal",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_C2_3.png",
-            "type" : "c2",
-            "id" : "054",
-            "details" : ""
         },
         {
-            "name" : "Cloud Service Password Spray",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_1.png",
+            "name" : "USB Drive-By",
+            "image" : "decks/RedCanary/REDCANARY__3.png",
+            "type" : "initial",
+            "id" : "054",
+            "details" : "<li><a target=\"_blank\" href=\"https://redcanary.com/blog/raspberry-robin/\">https://redcanary.com/blog/raspberry-robin/</a></li><li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1091/\">https://attack.mitre.org/techniques/T1091/</a></li>"
+        },
+        {
+            "name" : "Compiled After Delivery",
+            "image" : "decks/RedCanary/REDCANARY__4.png",
             "type" : "initial",
             "id" : "055",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/byt3bl33d3r/SprayingToolkit\">https://github.com/byt3bl33d3r/SprayingToolkit</a></li><li><a target=\"_blank\" href=\"https://github.com/vanhauser-thc/thc-hydra\">https://github.com/vanhauser-thc/thc-hydra</a></li><li><a target=\"_blank\" href=\"https://github.com/dafthack/MailSniper\">https://github.com/dafthack/MailSniper</a></li><li><a target=\"_blank\" href=\"https://github.com/arch4ngel/BruteLoops\">https://github.com/arch4ngel/BruteLoops</a></li><li><a target=\"_blank\" href=\"https://github.com/dafthack/MSOLSpray\">https://github.com/dafthack/MSOLSpray</a></li><li><a target=\"_blank\" href=\"https://github.com/ustayready/fireprox\">https://github.com/ustayready/fireprox</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1027/004/\">https://attack.mitre.org/techniques/T1027/004/</a></li>"
         },
         {
-            "name" : "Cloud Service Provider Vulnerability",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_2.png",
+            "name" : "Gatekeeper Bypass",
+            "image" : "decks/RedCanary/REDCANARY__5.png",
             "type" : "initial",
             "id" : "056",
-            "details" : "<li><a target=\"_blank\" href=\"https://threatpost.com/azure-zero-day-supply-chain/169508/\">https://threatpost.com/azure-zero-day-supply-chain/169508/</a></li><li><a target=\"_blank\" href=\"https://orca.security/resources/blog/aws-cloudformation-vulnerability/\">https://orca.security/resources/blog/aws-cloudformation-vulnerability/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1553/001/\">https://attack.mitre.org/techniques/T1553/001/</a></li>"
         },
         {
-            "name" : "Credentials Posted Publicly in a Code Repository",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_3.png",
+            "name" : "Obfuscated Payload Delivery",
+            "image" : "decks/RedCanary/REDCANARY__6.png",
             "type" : "initial",
             "id" : "057",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/zricethezav/gitleaks\">https://github.com/zricethezav/gitleaks</a></li><li><a target=\"_blank\" href=\"https://github.com/trufflesecurity/truffleHog\">https://github.com/trufflesecurity/truffleHog</a></li><li><a target=\"_blank\" href=\"https://github.com/michenriksen/gitrob\">https://github.com/michenriksen/gitrob</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1027/\">https://attack.mitre.org/techniques/T1027/</a></li>"
         },
         {
-            "name" : "Malicious OAuth Applciation",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_4.png",
+            "name" : "RFID Thief",
+            "image" : "decks/RedCanary/REDCANARY__7.png",
             "type" : "initial",
             "id" : "058",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/mdsecactivebreach/o365-attack-toolkit\">https://github.com/mdsecactivebreach/o365-attack-toolkit</a></li><li><a target=\"_blank\" href=\"https://threatpost.com/oauth-phishing-microsoft-o365-attacks/159713/\">https://threatpost.com/oauth-phishing-microsoft-o365-attacks/159713/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://docs.flipperzero.one/\">https://docs.flipperzero.one/</a></li>"
         },
         {
-            "name" : "Misconfigured MFA",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_5.png",
-            "type" : "initial",
+            "name" : "Disabling Windows Defender",
+            "image" : "decks/RedCanary/REDCANARY__8.png",
+            "type" : "pivot",
             "id" : "059",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/dafthack/MFASweep\">https://github.com/dafthack/MFASweep</a></li><li><a target=\"_blank\" href=\"https://www.blackhillsinfosec.com/exploiting-mfa-inconsistencies-on-microsoft-services/\">https://www.blackhillsinfosec.com/exploiting-mfa-inconsistencies-on-microsoft-services/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1059/001/\">https://attack.mitre.org/techniques/T1059/001/</a></li>"
         },
         {
-            "name" : "Public Storage Bucket Exposed",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_6.png",
-            "type" : "initial",
+            "name" : "Process Injection",
+            "image" : "decks/RedCanary/REDCANARY__9.png",
+            "type" : "pivot",
             "id" : "060",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/jordanpotti/AWSBucketDump\">https://github.com/jordanpotti/AWSBucketDump</a></li><li><a target=\"_blank\" href=\"https://github.com/initstring/cloud_enum\">https://github.com/initstring/cloud_enum</a></li><li><a target=\"_blank\" href=\"https://github.com/NetSPI/MicroBurst\">https://github.com/NetSPI/MicroBurst</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1055/\">https://attack.mitre.org/techniques/T1055/</a></li>"
         },
         {
-            "name" : "Out-of-Band Phish",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_IC_7.png",
-            "type" : "initial",
+            "name" : "LSASS Credential Dump",
+            "image" : "decks/RedCanary/REDCANARY__10.png",
+            "type" : "pivot",
             "id" : "061",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/kgretzky/evilginx2\">https://github.com/kgretzky/evilginx2</a></li><li><a target=\"_blank\" href=\"https://github.com/drk1wi/Modlishka\">https://github.com/drk1wi/Modlishka</a></li><li><a target=\"_blank\" href=\"https://www.blackhillsinfosec.com/how-to-phish-for-geniuses\">https://www.blackhillsinfosec.com/how-to-phish-for-geniuses</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1003/001/\">https://attack.mitre.org/techniques/T1003/001/</a></li>"
         },
         {
-            "name" : "AI Hacked Into Your Cloud Accounts",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_1.png",
-            "type" : "inject",
+            "name" : "Application Control Bypass",
+            "image" : "decks/RedCanary/REDCANARY__11.png",
+            "type" : "pivot",
             "id" : "062",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1218/011/\">https://attack.mitre.org/techniques/T1218/011/</a></li>"
         },
         {
-            "name" : "Cloud Provider Disabled Vulnerable Functionality",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_2.png",
-            "type" : "inject",
+            "name" : "Read/Write With chmod 777",
+            "image" : "decks/RedCanary/REDCANARY__12.png",
+            "type" : "pivot",
             "id" : "063",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1548/001/\">https://attack.mitre.org/techniques/T1548/001/</a></li>"
         },
         {
-            "name" : "Cloud Bill Due",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_3.png",
-            "type" : "inject",
+            "name" : "PsExec Abuse",
+            "image" : "decks/RedCanary/REDCANARY__13.png",
+            "type" : "pivot",
             "id" : "064",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1021/002/\">https://attack.mitre.org/techniques/T1021/002/</a></li>"
         },
         {
-            "name" : "Cloud Security Training",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_4.png",
-            "type" : "inject",
+            "name" : "Lateral Tool Transfer",
+            "image" : "decks/RedCanary/REDCANARY__14.png",
+            "type" : "pivot",
             "id" : "065",
-            "details" : "<li><a target=\"_blank\" href=\"https://www.antisyphontraining.com/\">https://www.antisyphontraining.com/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1570/\">https://attack.mitre.org/techniques/T1570/</a></li>"
         },
         {
-            "name" : "Cryptominer",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_5.png",
-            "type" : "inject",
+            "name" : "Authorized Remote Tools",
+            "image" : "decks/RedCanary/REDCANARY__15.png",
+            "type" : "c2",
             "id" : "066",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1219/\">https://attack.mitre.org/techniques/T1219/</a></li>"
         },
         {
-            "name" : "Dangling Domains",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_6.png",
-            "type" : "inject",
+            "name" : "Cloud Services as Exfil",
+            "image" : "decks/RedCanary/REDCANARY__16.png",
+            "type" : "c2",
             "id" : "067",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1528/\">https://attack.mitre.org/techniques/T1528/</a></li>"
         },
         {
-            "name" : "Exposed Cloud Access Keys During Public Presentation",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_7.png",
-            "type" : "inject",
+            "name" : "Bluetooth as Exfil",
+            "image" : "decks/RedCanary/REDCANARY__17.png",
+            "type" : "c2",
             "id" : "068",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1011/001/\">https://attack.mitre.org/techniques/T1011/001/</a></li>"
         },
         {
-            "name" : "I'm Not the Cloud Person",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_8.png",
-            "type" : "inject",
+            "name" : "Malicious Access Point",
+            "image" : "decks/RedCanary/REDCANARY__18.png",
+            "type" : "c2",
             "id" : "069",
             "details" : ""
         },
         {
-            "name" : "Regional Cloud Provider Data Center Outage",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_9.png",
-            "type" : "inject",
+            "name" : "Event-Triggered Execution",
+            "image" : "decks/RedCanary/REDCANARY__19.png",
+            "type" : "persist",
             "id" : "070",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1047/\">https://attack.mitre.org/techniques/T1047/</a></li>"
         },
         {
-            "name" : "Third-Party Code Library Compromised",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_INJECT_10.png",
-            "type" : "inject",
+            "name" : "Scheduled Task",
+            "image" : "decks/RedCanary/REDCANARY__20.png",
+            "type" : "persist",
             "id" : "071",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1053/005/\">https://attack.mitre.org/techniques/T1053/005/</a></li>"
         },
         {
-            "name" : "Query of Cloud APIs",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_1.png",
-            "type" : "pivot",
+            "name" : "Rename Process",
+            "image" : "decks/RedCanary/REDCANARY__21.png",
+            "type" : "persist",
             "id" : "072",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/dirkjanm/ROADtools\">https://github.com/dirkjanm/ROADtools</a></li><li><a target=\"_blank\" href=\"https://github.com/nccgroup/ScoutSuite\">https://github.com/nccgroup/ScoutSuite</a></li><li><a target=\"_blank\" href=\"https://github.com/BloodHoundAD/AzureHound\">https://github.com/BloodHoundAD/AzureHound</a></li><li><a target=\"_blank\" href=\"https://github.com/prowler-cloud/prowler\">https://github.com/prowler-cloud/prowler</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1036/003/\">https://attack.mitre.org/techniques/T1036/003/</a></li>"
         },
         {
-            "name" : "Credentials Exposed in Environment Variables",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_2.png",
-            "type" : "pivot",
+            "name" : "Spawn Web Shell",
+            "image" : "decks/RedCanary/REDCANARY__22.png",
+            "type" : "persist",
             "id" : "073",
-            "details" : "<li><a target=\"_blank\" href=\"https://aws.amazon.com/premiumsupport/knowledge-center/lambda-environment-variables-iam-access/\">https://aws.amazon.com/premiumsupport/knowledge-center/lambda-environment-variables-iam-access/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1059/003/\">https://attack.mitre.org/techniques/T1059/003/</a></li>"
         },
         {
-            "name" : "Credential Store Compromise",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_3.png",
-            "type" : "pivot",
+            "name" : "Missed Payday",
+            "image" : "decks/RedCanary/REDCANARY__23.png",
+            "type" : "inject",
             "id" : "074",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/NetSPI/MicroBurst\">https://github.com/NetSPI/MicroBurst</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Instance Metadata Service Access",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_4.png",
-            "type" : "pivot",
-            "id" : "075", 
-            "details" : "<li><a target=\"_blank\" href=\"https://portswigger.net/daily-swig/aws-bolsters-security-to-defend-against-ssrf-attacks\">https://portswigger.net/daily-swig/aws-bolsters-security-to-defend-against-ssrf-attacks</a></li><li><a target=\"_blank\" href=\"https://github.com/tracer-tick/Abusing-AWS-IMDS-v1\">https://github.com/tracer-tick/Abusing-AWS-IMDS-v1</a></li>"
+            "name" : "Not a Red Team",
+            "image" : "decks/RedCanary/REDCANARY__24.png",
+            "type" : "inject",
+            "id" : "075",
+            "details" : ""
         },
         {
-            "name" : "Malicious File Upload to Shared File Service",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_5.png",
-            "type" : "pivot",
+            "name" : "Deez Registry Keyz Plz?",
+            "image" : "decks/RedCanary/REDCANARY__25.png",
+            "type" : "inject",
             "id" : "076",
-            "details" : "<li><a target=\"_blank\" href=\"https://infinitelogins.com/2020/12/17/capturing-password-hashes-via-malicious-lnk-files/\">https://infinitelogins.com/2020/12/17/capturing-password-hashes-via-malicious-lnk-files/</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Identity and Acess Management (IAM) Policy Abuse",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_6.png",
-            "type" : "pivot",
+            "name" : "Nuclear Test Site",
+            "image" : "decks/RedCanary/REDCANARY__26.png",
+            "type" : "inject",
             "id" : "077",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/RhinoSecurityLabs/pacu\">https://github.com/RhinoSecurityLabs/pacu</a></li><li><a target=\"_blank\" href=\"https://github.com/BloodHoundAD/AzureHound\">https://github.com/BloodHoundAD/AzureHound</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://atomicredteam.io/\">https://atomicredteam.io/</a></li>"
         },
         {
-            "name" : "Misconfigured Container Image Compromise",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_7.png",
-            "type" : "pivot",
+            "name" : "Quishing",
+            "image" : "decks/RedCanary/REDCANARY__27.png",
+            "type" : "inject",
             "id" : "078",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/RhinoSecurityLabs/pacu\">https://github.com/RhinoSecurityLabs/pacu</a></li><li><a target=\"_blank\" href=\"https://unit42.paloaltonetworks.com/azure-container-instances\">https://unit42.paloaltonetworks.com/azure-container-instances</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Search and Pillage Emails",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PE_8.png",
-            "type" : "pivot",
+            "name" : "Cat on Keyboard Deletes Production Database",
+            "image" : "decks/RedCanary/REDCANARY__28.png",
+            "type" : "inject",
             "id" : "079",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/dafthack/MailSniper\">https://github.com/dafthack/MailSniper</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Backdoored Container Image",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PERSIST_1.png",
-            "type" : "persist",
+            "name" : "Undocumented System",
+            "image" : "decks/RedCanary/REDCANARY__29.png",
+            "type" : "inject",
             "id" : "080",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/RhinoSecurityLabs/ccat\">https://github.com/RhinoSecurityLabs/ccat</a></li><li><a target=\"_blank\" href=\"https://github.com/RhinoSecurityLabs/pacu\">https://github.com/RhinoSecurityLabs/pacu</a></li>"
+            "details" : ""
         },
         {
-            "name" : "Cross-Tenant Access",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PERSIST_2.png",
-            "type" : "persist",
+            "name" : "Sneaky Sneaky RAT",
+            "image" : "decks/RedCanary/REDCANARY__30.png",
+            "type" : "inject",
             "id" : "081",
-            "details" : "<li><a target=\"_blank\" href=\"https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-iam/\">https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-iam/</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://attack.mitre.org/techniques/T1105/\">https://attack.mitre.org/techniques/T1105/</a></li>"
         },
         {
-            "name" : "MFA Bypass: App Password Creation",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PERSIST_3.png",
-            "type" : "persist",
+            "name" : "Adam Mashinchi",
+            "image" : "decks/RedCanary/REDCANARY__31.png",
+            "type" : "consultant",
             "id" : "082",
-            "details" : "<li><a target=\"_blank\" href=\"https://support.microsoft.com/en-us/account-billing/manage-app-passwords-for-two-step-verification-d6dc8c6d-4bf7-4851-ad95-6d07799387e9\">https://support.microsoft.com/en-us/account-billing/manage-app-passwords-for-two-step-verification-d6dc8c6d-4bf7-4851-ad95-6d07799387e9</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://twitter.com/Adam_Mashinchi\">https://twitter.com/Adam_Mashinchi</a></li>"
         },
         {
-            "name" : "Secondary Access Key Creation",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PERSIST_4.png",
-            "type" : "persist",
+            "name" : "Carrie Roberts",
+            "image" : "decks/RedCanary/REDCANARY__32.png",
+            "type" : "consultant",
             "id" : "083",
-            "details" : "<li><a target=\"_blank\" href=\"https://github.com/RhinoSecurityLabs/pacu\">https://github.com/RhinoSecurityLabs/pacu</a></li>"
+            "details" : "<li><a target=\"_blank\" href=\"https://twitter.com/oroneequalsone\">https://twitter.com/oroneequalsone</a></li>"
         },
         {
-            "name" : "Cloud Event Log Analysis",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PROCEDURE_1.png",
-            "type" : "procedure",
+            "name" : "Mike Haag",
+            "image" : "decks/RedCanary/REDCANARY__33.png",
+            "type" : "consultant",
             "id" : "084",
-            "details" : ""
-        },
-        {
-            "name" : "Permissions Audit",
-            "image" : "decks/CloudSecurity/BNB_CARDS_CloudDeck_PROCEDURE_2.png",
-            "type" : "procedure",
-            "id" : "085",
-            "details" : ""
+            "details" : "<li><a target=\"_blank\" href=\"https://twitter.com/M_haggis\">https://twitter.com/M_haggis</a></li>"
         }
         
-            
 
     ],
 
@@ -614,8 +607,9 @@
     "brown": "img/bb-back-c2.png",
     "purple": "img/bb-back-persist.png",
     "grey":   "img/bb-back-inject.png",
-    "green":  "",
-    "logo":   "img/antisyphon.png",
+    "green":  "img/bb-back-consultant.png",
+    "logo":   "img/RedCanary_Logo_Primary.png",
     "addOnEnabled":"true"
+
 
 }

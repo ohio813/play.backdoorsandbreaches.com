@@ -57,6 +57,10 @@ function opendeckselector() {
       {
         cardlist = "decks/CloudSecurity/carddb.json";
       }
+      if (selecteddeck == "Red Canary")
+      {
+        cardlist = "decks/RedCanary/carddb.json";
+      }
   
           $.getJSON(cardlist, function(h) {
               $(a).html("<img class='full' src='"+h.red+"'>");

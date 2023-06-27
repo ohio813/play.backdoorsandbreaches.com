@@ -16,6 +16,8 @@ dragElement(document.getElementById("counter3"));
 dragElement(document.getElementById("hold1"));
 dragElement(document.getElementById("hold2"));
 dragElement(document.getElementById("hold3"));
+dragElement(document.getElementById("addonscenario"));
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -129,5 +131,25 @@ function initinjectstoggle() {
     x.style.display = "none";
   } else {
     x.style.display = "block";
+  }
+}
+
+//Add-On Scenario Toggles...you know...for the add-on scenarios
+
+function addonscenariotoggle() {
+  var ax = document.getElementById("addonscenario");
+  if (ax.style.display === "block") {
+    ax.style.display = "none";
+  } else {
+    ax.style.display = "block";
+  }
+}
+
+function addonsolutiontoggle() {
+  var ax = document.getElementById("dm_addonsolution");
+  if (ax.style.display === "block") {
+    ax.style.display = "none";
+  } else {
+    ax.style.display = "block";
   }
 }
