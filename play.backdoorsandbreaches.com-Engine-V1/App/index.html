@@ -83,6 +83,9 @@
       <button onclick="boxtoggle('proc');buildprocmenu();">Procedures</button>
       <button onclick="boxtoggle('start');buildinjmenu();">Starting Cond</button>
       |
+      <input type="checkbox" id="forAddOn" name="Add-On" value="false">
+      <label for="forAddOn" id="forAddOnLabel" checked="false">For Add On</label>
+      
       <button onClick="customtoggle()">Close</button>
       <div id="ic">Inital Compromise</div>
       <div id="pv">Pivot</div>
@@ -322,7 +325,10 @@
   <script type="text/javascript" src="ui-builder.js"></script>
   <script type="text/javascript" src="deck-script.js"></script>
   
+  
   <script type="text/javascript">
+
+  $('#forAddOn').prop('checked', false); //make sure that the game starts with select add on disabled in custom
 
     console.log("entered the new script");
     selectedDeck = localStorage.getItem("deckKey");

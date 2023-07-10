@@ -2,15 +2,51 @@
 // B&B - Engine.UB.1.0
 //
 
+
+var forAddOnEnabled = false;
+
+$( "#forAddOn" ).on( "click", function() {
+
+    // Assuming you have a checkbox element with the ID 'myCheckbox'
+var isChecked = $('#forAddOn').prop('checked');
+
+    if (isChecked) {
+        // Checkbox is checked
+        console.log('for Add On is checked.');
+        forAddOnEnabled = true;
+    } 
+    else {
+        forAddOnEnabled = false;
+        console.log('for Add On is not checked.');
+    }
+    
+        
+
+  });
+
 //TOGGLE FUNCTIONS
 remprocs = Object.assign([], proc);
 function customtoggle() {
+
   var x = document.getElementById("builder");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
   }
+  //Check if we have add-on scenarios
+  if (hasAddOns == true)
+  {
+    $("#forAddOn").show();
+    $("#forAddOnLabel").show();
+  }
+  else
+  {
+    $("#forAddOn").hide();
+    $("#forAddOnLabel").hide();
+  }
+
+
 }
 
 menus = ["ic","pv","c2","ps","proc","start"]
@@ -91,6 +127,7 @@ function buildscenemenu(s){
 }
 
 function buildinjmenu(){
+    
 
     //Card Selectors
     document.getElementById("start").innerHTML = "";
@@ -116,6 +153,7 @@ custom = [0,0,0,0]
 
 function choose(id,contents) {
     console.log(id);
+    
 
     //fix lightbox and formatting
     card = contents.innerHTML;
@@ -123,56 +161,90 @@ function choose(id,contents) {
     swap = swap.replace("return false;","")
     swap = swap.replace("data","data-lightbox")
     //console.log(swap);
-
+    
     if (id.includes("ic")) {
-        document.getElementById("a").innerHTML = swap;
-        document.getElementById("dma").innerHTML = swap;
-        //boxtoggle('ic');
-        idx=id.replace("ic_","")
-        reminit=init.slice();
-        reminit.splice(idx, 1);
-        custom.splice(0,1,id)
+        
+        //Here, we need to check if we are selecting for the add-on, or the main deck.
+        if (forAddOnEnabled)
+        {
+            addICCustom(swap);
+        }
+        else
+        {
+            document.getElementById("a").innerHTML = swap;
+            document.getElementById("dma").innerHTML = swap;
+            //boxtoggle('ic');
+            idx=id.replace("ic_","")
+            reminit=init.slice();
+            reminit.splice(idx, 1);
+            custom.splice(0,1,id)
+        }
+        
 
 
     }
     if (id.includes("pv")) {
-        document.getElementById("b").innerHTML = swap;
-        document.getElementById("dmb").innerHTML = swap;
-        //boxtoggle('pv');
-        idx=id.replace("pv_","")
-        rempivot=pivot.slice();
-        rempivot.splice(idx, 1);
-        custom.splice(1,1,id)
+        if (forAddOnEnabled)
+        {
+            addPECustom(swap);
+        }
+        else
+        {
+            document.getElementById("b").innerHTML = swap;
+            document.getElementById("dmb").innerHTML = swap;
+            //boxtoggle('pv');
+            idx=id.replace("pv_","")
+            rempivot=pivot.slice();
+            rempivot.splice(idx, 1);
+            custom.splice(1,1,id)
+        }
+        
 
 
     }
     if (id.includes("c2")) {
-        document.getElementById("c").innerHTML = swap;
-        document.getElementById("dmc").innerHTML = swap;
-        //boxtoggle('c2');
-        idx=id.replace("c2_","")
-        remc2=c2.slice();
-        remc2.splice(idx, 1);
-        custom.splice(2,1,id)
+
+        if (forAddOnEnabled)
+        {
+            addCECustom(swap);
+        }
+        else
+        {
+            document.getElementById("c").innerHTML = swap;
+            document.getElementById("dmc").innerHTML = swap;
+            //boxtoggle('c2');
+            idx=id.replace("c2_","")
+            remc2=c2.slice();
+            remc2.splice(idx, 1);
+            custom.splice(2,1,id)
+        }
+        
 
 
     }
     if (id.includes("ps")) {
-        document.getElementById("d").innerHTML = swap;
-        document.getElementById("dmd").innerHTML = swap;
-        //boxtoggle('ps');
-        idx=id.replace("ps_","")
-        rempersist=persist.slice();
-        rempersist.splice(idx, 1);
-        custom.splice(3,1,id)
-
-
+        if (forAddOnEnabled)
+        {
+            addPERCustom(swap);
+        }
+        else
+        {
+            document.getElementById("d").innerHTML = swap;
+            document.getElementById("dmd").innerHTML = swap;
+            //boxtoggle('ps');
+            idx=id.replace("ps_","")
+            rempersist=persist.slice();
+            rempersist.splice(idx, 1);
+            custom.splice(3,1,id)
+        }
     }
 return false;
 }
 
 function chooseinj(id,contents) {
     console.log(id);
+
+    
 
     //fix lightbox and formatting
     card = contents.innerHTML;

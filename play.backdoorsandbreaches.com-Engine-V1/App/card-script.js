@@ -142,6 +142,7 @@ CE = 0
 PER = 0
 
         //EXPANSION SCENARIO ADD-ONS SCRIPTS
+        //NOTE: The custom functions of each add method are designed for the custom scenario tools.
         function addIC() {
             IC++
               document.getElementById("addIC").innerHTML += "<div class=\"cards__single_"+IC+"\" id=\"ic_"+IC+"\"><div class=\"cards__front\"><img src=\"img/bb-back-init.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"w"+IC+"\">"+init.slice(IC,IC+1);+"</div></div></div>"
@@ -161,6 +162,33 @@ PER = 0
              });
 
         }
+        function addICCustom(objects)
+        {
+          console.log(swap);
+            IC++
+            if (IC > 2) {
+                
+                clear_ic();
+                IC++; //prevents an extra from getting through...
+               }
+               else if (IC == 2)
+               {
+                buttIC.style.display = "none";
+                clearIC.style.display = "inline";
+               }
+              document.getElementById("addIC").innerHTML += "<div class=\"cards__single_"+IC+"\" id=\"ic_"+IC+"\"><div class=\"cards__front\"><img src=\"img/bb-back-init.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"w"+IC+"\">"+init.slice(IC,IC+1);+"</div></div></div>"
+              document.getElementById("w"+IC).innerHTML = objects;
+              
+             document.getElementById("solIC").innerHTML += objects;
+             const addtrigger = document.querySelectorAll('[id^="ic_"]');
+             addtrigger.forEach((xc) =>  {
+
+             if(xc.getAttribute("state")!=="flipped")
+	            {
+                    xc.addEventListener("click", flipCard);
+                }
+             });
+        }
         function addPE() {
             PE++
               document.getElementById("addPE").innerHTML += "<div class=\"cards__single_"+PE+"\" id=\"pe_"+PE+"\"><div class=\"cards__front\"><img src=\"img/bb-back-pivot.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"x"+PE+"\">"+pivot.slice(PE,PE+1);+"</div></div></div>"
@@ -179,6 +207,31 @@ PER = 0
                 }
              });
         }
+        function addPECustom(objectsPE) {
+          PE++
+          if (PE > 2) {
+                
+            clear_pe();
+            PE++; //prevents an extra from getting through...
+           }
+           else if (PE == 2)
+           {
+            buttPE.style.display = "none";
+            clearPE.style.display = "inline";
+           }
+              document.getElementById("addPE").innerHTML += "<div class=\"cards__single_"+PE+"\" id=\"pe_"+PE+"\"><div class=\"cards__front\"><img src=\"img/bb-back-pivot.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"x"+PE+"\">"+pivot.slice(PE,PE+1);+"</div></div></div>"
+              document.getElementById("x"+PE).innerHTML = objectsPE;
+              
+              document.getElementById("solPE").innerHTML += objectsPE;
+              const addtrigger = document.querySelectorAll('[id^="pe_"]');
+              addtrigger.forEach((xc) =>  {
+
+             if(xc.getAttribute("state")!=="flipped")
+	            {
+                    xc.addEventListener("click", flipCard);
+                }
+             });
+      }
         function addCE() {
             CE++
               document.getElementById("addCE").innerHTML += "<div class=\"cards__single_"+CE+"\" id=\"ce_"+CE+"\"><div class=\"cards__front\"><img src=\"img/bb-back-c2.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"y"+CE+"\">"+c2.slice(CE,CE+1);+"</div></div></div>"
@@ -188,6 +241,32 @@ PER = 0
               clearCE.style.display = "inline";
              }
               document.getElementById("solCE").innerHTML += remc2.slice(CE,CE+1);
+              const addtrigger = document.querySelectorAll('[id^="ce_"]');
+              addtrigger.forEach((xc) =>  {
+
+             if(xc.getAttribute("state")!=="flipped")
+	            {
+                    xc.addEventListener("click", flipCard);
+                }
+             });
+        }
+        function addCECustom(objectsCE)
+        {
+          CE++
+          if (CE > 2) {
+                
+            clear_ce();
+            CE++; //prevents an extra from getting through...
+           }
+           else if (CE == 2)
+           {
+            buttCE.style.display = "none";
+            clearCE.style.display = "inline";
+           }
+              document.getElementById("addCE").innerHTML += "<div class=\"cards__single_"+CE+"\" id=\"ce_"+CE+"\"><div class=\"cards__front\"><img src=\"img/bb-back-c2.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"y"+CE+"\">"+c2.slice(CE,CE+1);+"</div></div></div>"
+              document.getElementById("y"+CE).innerHTML = objectsCE
+              
+              document.getElementById("solCE").innerHTML += objectsCE;
               const addtrigger = document.querySelectorAll('[id^="ce_"]');
               addtrigger.forEach((xc) =>  {
 
@@ -215,6 +294,34 @@ PER = 0
                 }
              });
         }
+        function addPERCustom(objectsPER)
+        {
+          PER++
+          if (PER > 2) {
+                
+            clear_per();
+            PER++; //prevents an extra from getting through...
+           }
+           else if (PER == 2)
+           {
+            buttPER.style.display = "none";
+            clearPER.style.display = "inline";
+           }
+              document.getElementById("addPER").innerHTML += "<div class=\"cards__single_"+PER+"\" id=\"per_"+PER+"\"><div class=\"cards__front\"><img src=\"img/bb-back-persist.png\"></div><div class=\"cards__back\"><div class=\"init\" id=\"z"+PER+"\">"+persist.slice(PER,PER+1);+"</div></div></div>"
+              document.getElementById("z"+PER).innerHTML = objectsPER;
+              
+              document.getElementById("solPER").innerHTML += objectsPER;
+              const addtrigger = document.querySelectorAll('[id^="per_"]');
+              addtrigger.forEach((xc) =>  {
+
+             if(xc.getAttribute("state")!=="flipped")
+	            {
+                    xc.addEventListener("click", flipCard);
+                }
+             });
+        }
+
+
 
         //Build the list out
 
@@ -365,8 +472,8 @@ console.log(persist);
 console.log(c2);
 console.log(pivot);
 */
-console.log(ins);
-console.log(cons);
+//console.log(ins);
+//console.log(cons);
 
 
 
